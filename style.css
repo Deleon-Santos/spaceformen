@@ -11,7 +11,7 @@
 body{
     margin: auto;
     align-items: center;
-    
+    background-color: #5555554b;
 }
 .caixa_largura{
     max-width: 1224px;
@@ -30,6 +30,16 @@ body{
     margin: 10px 0;
     text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.352);
 }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Certifica que o header fique acima de outros elementos */
+    background-color: #fff; /* Define uma cor de fundo para que o conteúdo não "vaze" por baixo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
+}
+
 
 header .caixa_largura{
     padding: 0 6%;
@@ -46,23 +56,37 @@ header ul {
 
 } 
 header ul li{
-    padding: 20px;
+    padding-left: 50px;
     text-decoration: none;
     list-style: none; 
 }
 
 header ul li a{
     text-decoration: none;
+    color: #0000009f;
+    font-size: 1.3rem;
 }
 
+header li:hover{
+    transform: scale(1.03);
+    transition: .5s ease-in-out ease-in;
+    
+    text-decoration:underline;
+}
+header a:hover{
+    text-shadow: 2px 2px 3px 5px rgb(32, 31, 31);
+}
 header .logo img{
     width: 50px;
+    color: #000000ef;
+    margin-left:  -5px;
 }
 
 .baner img{
     width: 100%;
     height: 100vh;
-    
+    padding-top: 70px;
+    filter: grayscale(100%); 
 }
 
 .baner {
@@ -70,7 +94,9 @@ header .logo img{
     width: 100%;
     height: auto;
     background-color: black;
-    padding: 20px 0;
+    padding: 40px 0;
+    
+    
   }
   
   .label {
@@ -85,15 +111,19 @@ header .logo img{
     text-align: center;
   }
 
-.label h1,h2,h3,strong{
+.label h1,h2,h3,em{
     color:antiquewhite;
+    text-shadow: 2px 2px 3px  #000000;
 }
 .label h1{
-    font-size: 4rem;
+    font-size: 5rem;
 }
-
+.label h2, h3{
+    font-size: 2rem;
+}
 .sobre .titulo-principal{
     text-align: center;
+    padding: 20px 0;
 }
 
 .sobre strong{
@@ -133,6 +163,7 @@ header .logo img{
 
 .local .titulo-principal{
     text-align:center ;
+    padding: 20px 0;
 }
 .local .caixa_largura{
     padding: 20px 6%;
@@ -186,7 +217,7 @@ header .logo img{
 
 .produtos .titulo-principal{
     text-align: center;
-    padding-bottom: 20px;
+    padding: 20px 0;
 }
 .produtos .caixa_flex{
     
@@ -202,7 +233,10 @@ header .logo img{
     padding: 20px;
     background-color: white;
 }
-
+.servicos:hover{
+    transform: scale(1.03);
+    transition: .5s ease-in-out ease-in;
+}
 .servicos p, h4 , strong{
     text-align: center;
     color: rgba(0, 0, 0, 0.539);
@@ -222,7 +256,8 @@ header .logo img{
     
 .formulario .titulo-principal{
     text-align: center;
-    display: inline;
+    padding: 20px 0;
+    padding-left: 60px;
     
 }
 .contate-nos{
@@ -329,10 +364,83 @@ footer{
     background: url(./bg.jpg);
     padding: 40px 0;
     
+    
+}
+footer .rodape{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+footer .caixa_largura{
+    padding: 20px 6% ;
+    
+}
+
+footer .caixa_flex{
+    justify-content: space-between;
+    gap: 20px;
+}
+footer .rodape h4, p, a, i{
+    text-align: left;
+    margin: 3px 0;
+    
+    
+}
+footer .rodape  p, i,a{
+    color: white;
+    font-size: .7rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+footer .rodape a{
+    text-decoration: none;
+   
+}
+footer .rodape p{
+    margin: 5px 0;
+}
+.rodape a:hover{
+    transform: scale(1.01);
+    transition: 0.5s ease-in-out ease-in;
+    text-shadow: 0 0 2px 2px antiquewhite;
+}
+footer .rodape i { 
+    padding-right:5px ;
+}
+footer .rodape h4{
+    padding: 10px 0;
+    font-size: 1.2;
+    color:white;
 }
 
 .copyright{
+    text-align: center;
     color: #ffffff;
     font-size: 13px;
-    margin: 20px 0 0;
+    margin: 0px 0 ;
+    padding: 10px 0;
+}
+.info p{
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+
+}
+.info{
+    background-color: rgba(255, 0, 0, 0.275);
+
+}
+footer{
+    padding-bottom: 0;
+}
+@media screen and (max-width:1024px){
+    .servicos img{
+        max-width: 150px;
+    }
+    .servicos{
+        max-width: 200px;
+        box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.387);
+        padding: 20px;
+        background-color: white;
+    }
+    
 }
