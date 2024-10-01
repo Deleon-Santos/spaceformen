@@ -472,93 +472,77 @@ footer{
     }
 }
 
-@media  screen and (max-width:540px) {
-    .caixa_flex{
-        flex-direction:column;
-        column-gap: 50px;
-    }
-    header .caixa_flex{
-        flex-direction: row;
-    }
-    .menu_hamburger_btn {
-        display: flex;
-    }
-    .menu_hamburger_btn:hover{
-        transform: scale(1.03);
-        transition: .5s ease-in-out ease-in;
-        text-shadow:  1px 3px 3px rgba(0, 0, 0, 0.387);
-    }
-    .menu_hamburger_btn.active .line-1 {
-        transform: rotate(45deg) translate(7px, 6px);
-    }
+    @media  screen and (max-width:540px) {
+        .caixa_flex{
+            flex-direction:column;
+            column-gap: 50px;
+        }
+        header .caixa_flex{
+            flex-direction: row;
+        }
+        .menu_hamburger_btn {
+            display: flex;
+        }
     
-    .menu_hamburger_btn.active .line-2 {
-        opacity: 0;
-    }
+        .menu_desck {
+            display: none;
+        }
+        .menu_mobile .caixa_flex{
+            display:block;
+            
+        }
+        .menu_mobile.show {
+            left: 0;
+            display: block;
+        }
+        .label h1,h2,h3,em{
+            
+            font-size: 1rem;
+        }
     
-    .menu_hamburger_btn.active .line-3 {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-    .menu_mobile.active {
-        display: block;
-    }
+        .sobre p,ul{
+            padding-top: 20px;
+        }
+        .beneficios .caixa_flex{
+            flex-direction: column-reverse;
+        }
+        .lista-beneficios{
+           margin-left:-50px;
+           
+        }
+        .produtos .caixa_flex  {
+            gap: 40px;
+        }
+        .servicos{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            
+        }
+        .servicos img{
+            align-items: center;
+            justify-content: center;
+        }
+        .formulario{
+            padding: 0 50px;
+            width: 50%px;
+            margin-left: -40px;
+        }
+        .formulario .btn-enviar {
+            padding-left: 10%;
 
-    .menu_desck {
-        display: none;
+           
+        }
+        footer .rodape{
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            
+           
+        }
     }
-    .menu_mobile .caixa_flex{
-        display:block;
-        
-    }
-    .menu_mobile.show {
-        left: 0;
-        display: block;
-        transition: right 10.3s ease-in-out;
-    }
-    .label h2,h3,em{
-        padding-top: 30px;
-        font-size: 1.3rem;
-    }
-    .label h1{
-        font-size: 2rem;
-        padding-top: 30px;
-    }
-    .sobre p,ul{
-        padding-top: 20px;
-    }
-    .beneficios .caixa_flex{
-        flex-direction: column-reverse;
-    }
-    .lista-beneficios{
-        margin-left:-50px;      
-    }
-    .produtos .caixa_flex  {
-        gap: 40px;
-    }
-    .servicos{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;    
-    }
-    .servicos img{
-        align-items: center;
-        justify-content: center;
-    }
-    .formulario{
-        padding: 0 50px;
-        width: 50%px;
-        margin-left: -40px;
-    }
-    .formulario .btn-enviar {
-        padding-left: 10%; 
-    }
-    footer .rodape{
-        width: 100%;
-        align-items: center;
-        justify-content: center;   
-    }
-
     
 }
