@@ -8,14 +8,21 @@ function toggleMenu() {
 
 menuHamburger.addEventListener('click', toggleMenu);
 
-// script.js
 
-// Função para alternar o menu hamburguer
-function toggleMenu() {
-    const menuMobile = document.getElementById('menu_mobile');
-    menuMobile.classList.toggle('show');
-}
 
 // Evento para o clique no botão do menu
 document.getElementById('menu_hamburger').addEventListener('click', toggleMenu);
 
+// Adiciona um evento de clique ao botão hamburguer para abrir/fechar o menu
+menuHamburger.addEventListener('click', function() {
+    menuHamburger.classList.toggle('active');
+    menuMobile.classList.toggle('active');
+    });
+    
+    // Adiciona eventos de clique a cada link do menu mobile para fechar o menu
+    menuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        menuHamburger.classList.remove('active'); // Remove a classe 'active' do botão
+        menuMobile.classList.remove('active'); // Remove a classe 'active' do menu mobile
+    });
+    });

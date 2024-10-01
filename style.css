@@ -11,7 +11,7 @@
 body{
     margin: auto;
     align-items: center;
-    background-color: #5555554b;
+    background-color: #d4e7f94b;
 }
 .caixa_largura{
     max-width: 1224px;
@@ -35,9 +35,9 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000; /* Certifica que o header fique acima de outros elementos */
-    background-color: #fff; /* Define uma cor de fundo para que o conteúdo não "vaze" por baixo */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destaque */
+    z-index: 1000; 
+    background-color: #fff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 
@@ -93,21 +93,22 @@ header .logo img{
 }
 
 .menu_hamburger_btn div {
-    height: 4px;
-    background-color: rgb(7, 7, 7);
-    margin: 5px 0;
+    height: 3px;
+    background-color: rgb(8, 8, 8);
+    margin: 3px 0;
 }
 
 /* Menu mobile */
 .menu_mobile {
     display: none;
     position: fixed;
-    top: 0;
+    top: 75px;
     right: -100%;
     height: 100%;
     width: 250px;
-    background-color: #333;
-    transition: right 0.3s ease-in-out;
+    background-color: #ffffff;
+    transition: right 10.3s ease-in-out;
+    
 }
 
 .menu_mobile ul {
@@ -123,7 +124,7 @@ header .logo img{
 
 .menu_mobile ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(4, 4, 4);
     font-size: 24px;
 }
     
@@ -330,9 +331,6 @@ form nav a:hover{
     text-decoration: underline;
 }
 
-
-
-
 form{
     margin: 40px 0;
     padding-left: -40px;
@@ -341,7 +339,6 @@ form{
 form label, form legend{
     display: block;
     font-size: 20px;
-    /* margin: 0 0 10px; */
 }
 
 .inputs-padrao{
@@ -354,11 +351,7 @@ form label, form legend{
 
 .checkbox{
     margin: 20px 0;
- 
-
 }
-
-
 
 .enviar{
     width: 105%;
@@ -376,7 +369,6 @@ form label, form legend{
     color: #000000;
     
 }
-
 
 table{
     margin: 20px 0  
@@ -397,9 +389,7 @@ td, th{
 footer{
     text-align: center;
     background: url(./bg.jpg);
-    padding: 40px 0;
-    
-    
+    padding: 40px 0;  
 }
 footer .rodape{
     width: 400px;
@@ -417,9 +407,7 @@ footer .caixa_flex{
 }
 footer .rodape h4, p, a, i{
     text-align: left;
-    margin: 3px 0;
-    
-    
+    margin: 3px 0; 
 }
 footer .rodape  p, i,a{
     color: white;
@@ -427,8 +415,7 @@ footer .rodape  p, i,a{
     font-family: 'Courier New', Courier, monospace;
 }
 footer .rodape a{
-    text-decoration: none;
-   
+    text-decoration: none;  
 }
 footer .rodape p{
     margin: 5px 0;
@@ -458,7 +445,6 @@ footer .rodape h4{
     text-align: center;
     color: #ffffff;
     padding: 20px;
-
 }
 .info{
     background-color: rgba(255, 0, 0, 0.275);
@@ -467,6 +453,7 @@ footer .rodape h4{
 footer{
     padding-bottom: 0;
 }
+
 @media screen and (max-width:1080px){
     .servicos img{
         max-width: 150px;
@@ -479,81 +466,99 @@ footer{
     }
     .formulario .btn-enviar {
         padding-left: 5%;
+    }
+    .beneficios .caixa_flex{
+        gap: 20px;
+    }
+}
 
-       
+@media  screen and (max-width:540px) {
+    .caixa_flex{
+        flex-direction:column;
+        column-gap: 50px;
+    }
+    header .caixa_flex{
+        flex-direction: row;
+    }
+    .menu_hamburger_btn {
+        display: flex;
+    }
+    .menu_hamburger_btn:hover{
+        transform: scale(1.03);
+        transition: .5s ease-in-out ease-in;
+        text-shadow:  1px 3px 3px rgba(0, 0, 0, 0.387);
+    }
+    .menu_hamburger_btn.active .line-1 {
+        transform: rotate(45deg) translate(7px, 6px);
+    }
+    
+    .menu_hamburger_btn.active .line-2 {
+        opacity: 0;
+    }
+    
+    .menu_hamburger_btn.active .line-3 {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    .menu_mobile.active {
+        display: block;
     }
 
-    @media  screen and (max-width:540px) {
-        .caixa_flex{
-            flex-direction:column;
-            column-gap: 50px;
-        }
-        header .caixa_flex{
-            flex-direction: row;
-        }
-        .menu_hamburger_btn {
-            display: flex;
-        }
-    
-        .menu_desck {
-            display: none;
-        }
-        .menu_mobile .caixa_flex{
-            display:block;
-            
-        }
-        .menu_mobile.show {
-            left: 0;
-            display: block;
-        }
-        .label h1,h2,h3,em{
-            
-            font-size: 1rem;
-        }
-    
-        .sobre p,ul{
-            padding-top: 20px;
-        }
-        .beneficios .caixa_flex{
-            flex-direction: column-reverse;
-        }
-        .lista-beneficios{
-           margin-left:-50px;
-           
-        }
-        .produtos .caixa_flex  {
-            gap: 40px;
-        }
-        .servicos{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            
-            
-        }
-        .servicos img{
-            align-items: center;
-            justify-content: center;
-        }
-        .formulario{
-            padding: 0 50px;
-            width: 50%px;
-            margin-left: -40px;
-        }
-        .formulario .btn-enviar {
-            padding-left: 10%;
-
-           
-        }
-        footer .rodape{
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-            
-           
-        }
+    .menu_desck {
+        display: none;
     }
+    .menu_mobile .caixa_flex{
+        display:block;
+        
+    }
+    .menu_mobile.show {
+        left: 0;
+        display: block;
+        transition: right 10.3s ease-in-out;
+    }
+    .label h2,h3,em{
+        padding-top: 30px;
+        font-size: 1.3rem;
+    }
+    .label h1{
+        font-size: 2rem;
+        padding-top: 30px;
+    }
+    .sobre p,ul{
+        padding-top: 20px;
+    }
+    .beneficios .caixa_flex{
+        flex-direction: column-reverse;
+    }
+    .lista-beneficios{
+        margin-left:-50px;      
+    }
+    .produtos .caixa_flex  {
+        gap: 40px;
+    }
+    .servicos{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+    }
+    .servicos img{
+        align-items: center;
+        justify-content: center;
+    }
+    .formulario{
+        padding: 0 50px;
+        width: 50%px;
+        margin-left: -40px;
+    }
+    .formulario .btn-enviar {
+        padding-left: 10%; 
+    }
+    footer .rodape{
+        width: 100%;
+        align-items: center;
+        justify-content: center;   
+    }
+
     
 }
