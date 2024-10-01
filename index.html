@@ -20,6 +20,16 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
     
 
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Hambúrguer Lateral</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
     <header class="cabeca">
         <div class="caixa_largura">
             <div class="caixa_flex">
@@ -28,14 +38,35 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                 </div>
                 <nav class="menu_desck">
                     <ul class="caixa_flex">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="produto.html">Produtos</a></li>
-                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#produto">Produtos</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
+                <div class="menu_hamburger_btn" id="menu_hamburger">
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                    <div class="line-3"></div>
+                </div>
             </div>
         </div>
+
+        <nav class="menu_mobile" id="menu_mobile">
+            <!-- <div class="menu_hamburger_btn" id="menu_hamburger">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div> -->
+            <ul class="caixa_flex">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#produto" onclick="toggleMenu()">Produtos</a></li>
+                <li><a href="#contato" onclick="toggleMenu()">Contato</a></li>
+            </ul>
+        </nav>
     </header>
+
+
+
 
    
 
@@ -79,7 +110,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                         <li class="itens">Pontualidade</li>
                         <li class="itens">Limpeza</li>
                     </ul>
-                    <div><img src="./beneficios.jpg" alt="beneficios" class="imagem_beneficios"></div>
+                    <div class="utencilio"><img src="./beneficios.jpg" alt="beneficios" class="imagem_beneficios"></div>
                 </div>
                 
             </div>
@@ -120,7 +151,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                         <img src="./cabelo.jpg" alt="cabelo">
                         <p class="descricao">Tesoura / Máquina</p>
                         <p class="valor"><strong>R$ 35.00</strong></p>
-                        </div>
+                    </div>
                     
                     <div class="servicos">
                         <h4 >Barba</h2>
@@ -158,7 +189,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
                     
                     
                         <label for="checkbox" class="checkbox"><input type="checkbox" name="" id="checkbox">Quero receber novidades por e-mail?</label>
-                        <input type="submit" value="Enviar formulario" class="enviar">
+                        <div class="btn-enviar"><input type="submit" value="Enviar formulario" class="enviar"></div>
                     </form>
                 </div>
             </div>
@@ -209,6 +240,6 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     </footer>
 
 
-
+    <script src="script.js"></script>
 </body>
 </html>
