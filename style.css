@@ -7,6 +7,9 @@
     font-weight: 600;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     margin: auto;
@@ -278,6 +281,7 @@ header .logo img{
 }
 .servicos{
     max-width: 300px;
+    min-width: 150px;
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.387);
     padding: 20px;
     background-color: white;
@@ -388,7 +392,7 @@ td, th{
 
 footer{
     text-align: center;
-    background: url(./bg.jpg);
+    background: url(imagem/bg.jpg);
     padding: 40px 0;  
 }
 footer .rodape{
@@ -468,10 +472,45 @@ footer{
         padding-left: 5%;
     }
     .beneficios .caixa_flex{
-        gap: 20px;
+        gap: 30px;
     }
 }
-
+@media screen and (max-width:700px) {
+    .servicos img{
+        max-width: 400px;
+    }
+    .servicos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        flex-direction: column;
+    }
+    .sobre .caixa_flex{
+        flex-direction: column;
+    }
+    .beneficios .caixa_flex{
+        flex-direction: column-reverse;
+    }
+    .lista-beneficios{
+        margin-left: -55px;
+    
+    }
+    .produtos .caixa_flex{
+        margin: 0 auto;
+        justify-content: center;
+        gap: 30px;
+    }
+    .servicos p, h4 , strong{
+        text-align: center;
+        font-size: .8rem;
+        display: flex;
+        align-items: center;
+        
+    }
+    
+    
+}
 @media  screen and (max-width:540px) {
     .caixa_flex{
         flex-direction:column;
@@ -529,14 +568,16 @@ footer{
     .beneficios .caixa_flex{
         flex-direction: column-reverse;
     }
+    
     .lista-beneficios{
-        margin-left:-50px;      
+        margin-left:-50px; 
+        padding-left: 10%;     
     }
     .produtos .caixa_flex  {
         gap: 40px;
     }
     .servicos{
-        width: 100%;
+        max-width: 600px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -545,6 +586,9 @@ footer{
     .servicos img{
         align-items: center;
         justify-content: center;
+        
+        max-width: 300px;
+        
     }
     .formulario{
         padding: 0 50px;
