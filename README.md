@@ -1,4 +1,4 @@
-https://deleon-santos.github.io/spaceformen/
+
 # Space for Men - Barbearia
 
 Este projeto é um site desenvolvido para uma barbearia fictícia chamada "Space for Men" tendo como base as aulas da Alura. Ele apresenta informações sobre a barbearia, seus serviços, localização, e oferece uma interface moderna e amigável para o usuário.
