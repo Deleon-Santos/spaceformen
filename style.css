@@ -427,7 +427,6 @@ footer .rodape p{
 .rodape a:hover{
     transform: scale(1.01);
     transition: 0.5s ease-in-out ease-in;
-    text-shadow: 0 0 2px 2px antiquewhite;
 }
 footer .rodape i { 
     padding-right:5px ;
@@ -437,7 +436,25 @@ footer .rodape h4{
     font-size: 1.2;
     color:white;
 }
-
+.rede_social a{
+    display: inline-block;
+    text-decoration: none;
+    margin:0 20px;
+}
+.rede_social{
+    padding:  15px ;
+    
+}
+.rede_social i,a:hover{
+    transform: scale(1.01);
+    transition: 0.5s ease-in-out ease-in;
+   
+}
+.rede_social i{
+    text-decoration: none; 
+    font-size: 1.1rem; 
+    margin-right: 5px;
+}
 .copyright{
     text-align: center;
     color: #ffffff;
