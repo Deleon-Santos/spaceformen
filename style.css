@@ -1,4 +1,8 @@
 
+
+html{
+    scroll-behavior: smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -6,15 +10,23 @@
     color:rgba(0, 0, 0, 0.521); 
     font-weight: 600;
 }
-
-html{
-    scroll-behavior: smooth;
+:root{
+    --fundo-header:#ffffff;
+    --fundo-bady:#aacff24b;
+    --fundo-section:#090909de;
+    --fundo-servico:url(imagem/bg.jpg);
+    --texto-padrao:rgba(0, 0, 0, 0.639);
+    --cor-sombra:rgba(0, 0, 0, 0.311);
+    --texto-destaque:rgba(255, 255, 255, 0.805);
+    --fundo-inf:rgba(255, 0, 0, 0.275);
+    --cor-strong:#000000ee;
 }
+
 
 body{
     margin: auto;
     align-items: center;
-    background-color: #d4e7f94b;
+    background-color: #aacff24b;
 }
 .caixa_largura{
     max-width: 1224px;
@@ -85,8 +97,6 @@ header .logo img{
     margin-left:  -5px;
 }
 
-
-
 .menu_hamburger_btn {
     display: none;
     flex-direction: column;
@@ -101,7 +111,6 @@ header .logo img{
     margin: 3px 0;
 }
 
-/* Menu mobile */
 .menu_mobile {
     display: none;
     position: fixed;
@@ -110,14 +119,12 @@ header .logo img{
     height: 100%;
     width: 250px;
     background-color: #ffffff;
-    transition: right 10.3s ease-in-out;
-    
+    transition: right 10.3s ease-in-out;    
 }
 
 .menu_mobile ul {
     padding: 50px 0;
-    list-style: none;
-    
+    list-style: none;   
 }
 
 .menu_mobile ul li {
@@ -130,9 +137,6 @@ header .logo img{
     color: rgb(4, 4, 4);
     font-size: 24px;
 }
-    
-/* Animação para abrir o menu mobile */
-
 
 .baner img{
     width: 100%;
@@ -146,9 +150,7 @@ header .logo img{
     width: 100%;
     height: auto;
     background-color: black;
-    padding: 40px 0;
-    
-    
+    padding: 40px 0;   
   }
   
   .label {
@@ -275,9 +277,7 @@ header .logo img{
     
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    
-    
+    flex-wrap: wrap;  
 }
 .servicos{
     max-width: 300px;
@@ -296,7 +296,6 @@ header .logo img{
 }
 .servicos  h4,strong{
     font-size: 1.3rem;
-
 }
 
 .formulario{
@@ -311,28 +310,10 @@ header .logo img{
     text-align: center;
     padding: 20px 0;
     padding-left: 60px;
-    
 }
 .contate-nos{
     align-items: center;
     width: 95%;
-}
-
-form nav li{
-    display:inline ;
-}
-
-form nav a{
-    text-transform:uppercase;
-    color: #000000;
-    font-weight:bold ;
-    font-size: 22px;
-    text-decoration: none;
-}
-
-form nav a:hover{
-    color: #c78c19;
-    text-decoration: underline;
 }
 
 form{
@@ -352,7 +333,6 @@ form label, form legend{
     width: 100%;
 }
 
-
 .checkbox{
     margin: 20px 0;
 }
@@ -370,25 +350,8 @@ form label, form legend{
 }
 .enviar:hover{
     background:rgb(207, 206, 205);
-    color: #000000;
-    
+    color: #000000;   
 }
-
-table{
-    margin: 20px 0  
-}
- 
-thead{
-    background: #555555;
-    color: white;
-    font-weight: bold;
-}
-
-td, th{
-    border: solid 1px #000000;
-    padding: 8px 15px;
-}
-
 
 footer{
     text-align: center;
@@ -401,8 +364,7 @@ footer .rodape{
     flex-direction: column;
 }
 footer .caixa_largura{
-    padding: 20px 6% ;
-    
+    padding: 20px 6% ;   
 }
 
 footer .caixa_flex{
@@ -442,13 +404,11 @@ footer .rodape h4{
     margin:0 20px;
 }
 .rede_social{
-    padding:  15px ;
-    
+    padding:  15px ;  
 }
 .rede_social i,a:hover{
     transform: scale(1.01);
     transition: 0.5s ease-in-out ease-in;
-   
 }
 .rede_social i{
     text-decoration: none; 
@@ -469,23 +429,20 @@ footer .rodape h4{
 }
 .info{
     background-color: rgba(255, 0, 0, 0.275);
-
 }
 footer{
     padding-bottom: 0;
 }
 
-/* Estilo inicial para quando as seções estão ocultas */
 .section-hidden {
     opacity: 0;
-    transform: translateY(200px); /* Movimenta a seção 20px para baixo */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Transição suave */
+    transform: translateY(200px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
 }
 
-/* Estilo para quando as seções aparecem */
 .section-visible {
     opacity: 1;
-    transform: translateY(0); /* Retorna a seção para sua posição original */
+    transform: translateY(0); 
 }
 
 @media screen and (max-width:1080px){
@@ -535,8 +492,7 @@ footer{
         text-align: center;
         font-size: .8rem;
         display: flex;
-        align-items: center;
-        
+        align-items: center;  
     }
     
     
@@ -580,7 +536,7 @@ footer{
         
     }
     .menu_mobile.show {
-        left: 0;
+        right: 0;
         display: block;
         transition: right 10.3s ease-in-out;
     }
@@ -615,10 +571,8 @@ footer{
     }
     .servicos img{
         align-items: center;
-        justify-content: center;
-        
-        max-width: 300px;
-        
+        justify-content: center;  
+        max-width: 300px;   
     }
     .formulario{
         padding: 0 50px;
