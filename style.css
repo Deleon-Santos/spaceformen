@@ -372,9 +372,10 @@ footer .caixa_flex{
     gap: 20px;
 }
 footer .rodape h4, p, a, i{
-    text-align: left;
+    text-align: center;
     margin: 3px 0; 
 }
+
 footer .rodape  p, i,a{
     color: white;
     font-size: .7rem;
@@ -461,6 +462,7 @@ footer{
     .beneficios .caixa_flex{
         gap: 30px;
     }
+   
 }
 @media screen and (max-width:700px) {
     .servicos img{
