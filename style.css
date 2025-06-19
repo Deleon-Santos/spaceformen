@@ -146,9 +146,10 @@ header .logo img{
 }
 
 .baner {
+    
     position: relative;
     width: 100%;
-    height: auto;
+    height: 400px;
     background-color: black;
     padding: 40px 0;   
   }
